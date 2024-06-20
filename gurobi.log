@@ -1,0 +1,13 @@
+
+Gurobi 11.0.2 (linux64, Python) logging started Thu Jun 20 13:19:41 2024
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+
+Gurobi 11.0.2 (linux64, Python) logging started Thu Jun 20 21:07:54 2024
+
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2528975
+Set parameter LogFile to value "gurobi.log"
+Academic license 2528975 - for non-commercial use only - registered to ha___@kaist.ac.kr
