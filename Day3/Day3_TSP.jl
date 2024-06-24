@@ -47,3 +47,24 @@ function TSP_model(distances)
 
     return model
 end
+
+function Gurobi_TSP_solver(distances)
+    m = TSP_model(distances)
+    @variable(m, t[2:n] >= 0)
+
+    x = m[:x]
+
+    # add all subtour elimination constraints
+    for i=2:n
+        for j=2:n
+            @constraint(m, t[j] >= t[i] + n * x[i, j] - (n-1))
+        end
+    end
+
+    optimize!(m)
+
+    # get the optimal tour
+    tour = get_tour(x, n)
+
+    return tour, value.(x), objective_value(m)
+end
