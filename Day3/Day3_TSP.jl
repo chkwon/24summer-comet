@@ -1,7 +1,7 @@
 using JuMP, Gurobi
 
 function get_tour(x, n)
-    tour = []
+    tour = Int[]
     i=1
     while true
         push!(tour, i)
